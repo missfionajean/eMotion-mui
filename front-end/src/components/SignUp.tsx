@@ -21,6 +21,20 @@ function SignUp({ setPage }: SignUpProps) {
                             name="username"
                             id="username"
                             placeholder="Enter username"
+                            required={true}
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter email address"
+                            required={true}
                         />
                     </div>
                     
@@ -33,6 +47,7 @@ function SignUp({ setPage }: SignUpProps) {
                             name="password"
                             id="password"
                             placeholder="Enter password"
+                            required={true}
                         />
                     </div>
 
@@ -45,6 +60,7 @@ function SignUp({ setPage }: SignUpProps) {
                             name="confirmPassword"
                             id="confirmPassword"
                             placeholder="Re-enter password"
+                            required={true}
                         />
                     </div>
 
@@ -58,7 +74,7 @@ function SignUp({ setPage }: SignUpProps) {
                 </form>
                 <div>
                     <h5>Already have an account? </h5>
-                    <a onClick={() => setPage("SignIn")}>
+                    <a onClick={() => setPage("Sign In")}>
                         Sign In
                     </a>
                 </div>

@@ -1,6 +1,9 @@
 // this is our main page that shows all user data
 import ePalette from "../utilities/ePalette";
 
+// MUI imports
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+
 function CalTest() {
     return (
         <>
@@ -12,6 +15,7 @@ function CalTest() {
                     </div>
                 ))}
             </div>
+            <DateCalendar />
         </>
     )
 }
