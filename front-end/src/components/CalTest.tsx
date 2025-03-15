@@ -3,7 +3,7 @@ import ePalette from "../utilities/ePalette";
 
 function CalTest() {
     return (
-        <div className="navshift">
+        <>
             <h1>Calendar Test Page</h1>
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
                 {Object.entries(ePalette).map(([emotion, color], index) => (
@@ -12,7 +12,7 @@ function CalTest() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     )
 }
 

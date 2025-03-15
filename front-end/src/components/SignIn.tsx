@@ -8,46 +8,55 @@ interface SignInProps {
 
 function SignIn({ setPage }: SignInProps) {
     return (
-        <div className="row">
-            <section className="col navshift">
+        <>
+            <section>
                 <h1>Sign In To Account</h1>
-                <form action="/auth/sign-in" method="POST">
-                    <div className="form-group">
-                        <label htmlFor="username" className="form-label ms-1">Username</label>
+                <form>
+                    <div>
+                        <label htmlFor="username">
+                            Username
+                        </label>
                         <input
                             type="text"
                             name="username"
                             id="username"
-                            className="form-control mb-3"
                             placeholder="Enter username"
                         />
                     </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password" className="form-label ms-1">Password</label>
+                    <div>
+                        <label htmlFor="password">
+                            Password
+                        </label>
                         <input
                             type="password"
                             name="password"
                             id="password"
-                            className="form-control mb-3"
                             placeholder="Enter password"
                         />
                     </div>
 
-                    <a href="/" type="button" className="btn btn-secondary me-2">Cancel</a>
+                    <a href="/" type="button">
+                        Cancel
+                    </a>
 
-                    <button type="submit" className="btn btn-primary">Sign In</button>
+                    <button type="submit">
+                        Sign In
+                    </button>
                 </form>
-                <div className="d-flex gap-2 mt-2">
+
+                <div>
                     <h5>Don't have an account yet? </h5>
-                    <a onClick={() => setPage("SignUp")} className="text-decoration-underline">Sign Up</a>
+                    <a onClick={() => setPage("SignUp")}>
+                        Sign Up
+                    </a>
                 </div>
             </section>
 
-            <section className="col bg-light navshift">
+            <section>
                 <Promo />
             </section>
-        </div>
+        </>
     )
 };
 

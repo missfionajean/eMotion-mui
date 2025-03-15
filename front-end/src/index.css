@@ -28,18 +28,14 @@ body {
   min-height: 100vh;
 }
 
-.navshift {
-    padding-top: 70px;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-.offcanvas-body h5:hover {
-    cursor: pointer;
-    color: #646cff;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 /* button {
@@ -60,12 +56,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
-
-.navbar-toggler {
-    text-decoration: none;
-    outline: none !important;
-    box-shadow: none !important;
-}
 
 @media (prefers-color-scheme: light) {
   :root {

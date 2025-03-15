@@ -8,57 +8,66 @@ interface SignUpProps {
 function SignUp({ setPage }: SignUpProps) {
 
     return (
-        <div className="row">
-            <section className="col navshift">
+        <>
+            <section>
                 <h1>Sign Up</h1>
-                <form action="/auth/sign-up" method="POST"> {/* this will be updated to the correct path */}
-                <div className="form-group">
-                    <label htmlFor="username" className="form-label ms-1">Username</label>
-                    <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        className="form-control mb-3"
-                        placeholder="Enter username"
-                    />
-                </div>
-                
-                <div className="form-group">
-                    <label htmlFor="password" className="form-label ms-1">Password</label>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        className="form-control mb-3"
-                        placeholder="Enter password"
-                    />
-                </div>
+                <form>
+                    <div>
+                        <label htmlFor="username">
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Enter username"
+                        />
+                    </div>
+                    
+                    <div>
+                        <label htmlFor="password">
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Enter password"
+                        />
+                    </div>
 
-                <div className="form-group">
-                    <label htmlFor="confirmPassword" className="form-label ms-1">Confirm Password</label>
-                    <input
-                        type="password"
-                        name="confirmPassword"
-                        id="confirmPassword"
-                        className="form-control mb-3"
-                        placeholder="Re-enter password"
-                    />
-                </div>
+                    <div>
+                        <label htmlFor="confirmPassword">
+                            Confirm Password
+                        </label>
+                        <input
+                            type="password"
+                            name="confirmPassword"
+                            id="confirmPassword"
+                            placeholder="Re-enter password"
+                        />
+                    </div>
 
-                <a href="/" type="button" className="btn btn-secondary me-2">Cancel</a>
+                    <a href="/" type="button">
+                        Cancel
+                    </a>
 
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                    <button type="submit">
+                        Sign Up
+                    </button>
                 </form>
-                <div className="d-flex gap-2 mt-2">
+                <div>
                     <h5>Already have an account? </h5>
-                    <a onClick={() => setPage("SignIn")} className="text-decoration-underline">Sign In</a>
+                    <a onClick={() => setPage("SignIn")}>
+                        Sign In
+                    </a>
                 </div>
             </section>
 
-            <section className="col bg-light navshift">
+            <section>
                 <Promo />
             </section>
-        </div>
+        </>
     )
 }
 
