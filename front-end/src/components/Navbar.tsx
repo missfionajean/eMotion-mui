@@ -63,19 +63,19 @@ function Navbar({ setPage }: NavbarProps) {
       );
 
 	return (
-		<>
-        <AppBar position="sticky" sx={{ bgcolor: "lightseagreen" }}>
-            <Toolbar>
-                <Button onClick={toggleDrawer(true)}>
-                    <MenuIcon sx={{ color: "white" }}/>
-                </Button>
-                <Drawer open={open} onClose={toggleDrawer(false)}>
-                    {DrawerList}
-                </Drawer>
-                <h3 onClick={() => setPage('Home')}>eMotion</h3>
-            </Toolbar>
-        </AppBar>
-		</>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="sticky" sx={{ bgcolor: "lightseagreen" }}>
+                <Toolbar>
+                    <Button onClick={toggleDrawer(true)}>
+                        <MenuIcon sx={{ color: "white" }}/>
+                    </Button>
+                    <Drawer open={open} onClose={toggleDrawer(false)}>
+                        {DrawerList}
+                    </Drawer>
+                    <h3 onClick={() => setPage('Home')}>eMotion</h3>
+                </Toolbar>
+            </AppBar>
+        </Box>
 	);
 }
 
