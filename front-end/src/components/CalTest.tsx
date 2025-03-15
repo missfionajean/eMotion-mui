@@ -1,5 +1,5 @@
 // this is our main page that shows all user data
-import ePalette from "./ePalette";
+import ePalette from "../utilities/ePalette";
 
 function CalTest() {
     return (
