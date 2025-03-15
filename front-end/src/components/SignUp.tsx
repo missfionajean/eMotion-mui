@@ -74,7 +74,7 @@ function SignUp({ setPage }: SignUpProps) {
                 </form>
                 <div>
                     <h5>Already have an account? </h5>
-                    <a onClick={() => setPage("SignIn")}>
+                    <a onClick={() => setPage("Sign In")}>
                         Sign In
                     </a>
                 </div>
