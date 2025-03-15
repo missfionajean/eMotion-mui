@@ -1,7 +1,8 @@
 // this is the sign in page
 import Promo from "./Promo";
 
-interface SignInProps { // declaring setPage as a function with type string and it wont return anything (void)
+interface SignInProps {
+    // declaring setPage as a function with type string and it wont return anything (void)
     setPage: (page: string) => void;
 }
 

@@ -1,6 +1,5 @@
-// import { useState } from 'react'
-
-interface NavbarProps { // declaring setPage as a function with type string and it wont return anything (void)
+interface NavbarProps {
+    // declaring setPage as a function with type string and it wont return anything (void)
     setPage: (page: string) => void;
 }
 
