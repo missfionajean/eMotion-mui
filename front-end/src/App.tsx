@@ -6,7 +6,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
-// import components
+// import components and containing box
+import Box from '@mui/material/Box';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import MyProfile from "./components/MyProfile";
@@ -26,13 +27,13 @@ function App() {
                 {/* CSS Baseline provides extra styling presets to improve MUI compatibility */}
                 <CssBaseline />
                 <Navbar setPage={setPage} />
-                <div>
+                <Box sx={{ m: 2 }}>
                     {page === "Home" ? <Home /> : ""}
                     {page === "My Profile" ? <MyProfile /> : ""}
                     {page === "Sign In" ? <SignIn setPage={setPage} /> : ""}
                     {page === "Sign Up" ? <SignUp setPage={setPage} /> : ""}
                     {page === "Cal Test" ? <CalTest /> : ""}
-                </div>
+                </Box>
             </React.Fragment>
         </LocalizationProvider>
 	);
