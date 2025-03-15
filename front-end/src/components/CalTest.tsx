@@ -8,6 +8,7 @@ function CalTest() {
     return (
         <>
             <h1>Calendar Test Page</h1>
+            <DateCalendar />
             <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
                 {Object.entries(ePalette).map(([emotion, color], index) => (
                     <div key={index} style={{ backgroundColor: color, width: "100px", height: "100px" }}>
@@ -15,7 +16,6 @@ function CalTest() {
                     </div>
                 ))}
             </div>
-            <DateCalendar />
         </>
     )
 }

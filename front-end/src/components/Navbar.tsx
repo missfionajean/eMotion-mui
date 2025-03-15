@@ -14,6 +14,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 // imports for MUI icons
 import MenuIcon from '@mui/icons-material/Menu';
+import { Toolbar } from '@mui/material';
 
 // type declaration for NavbarProps
 interface NavbarProps {
@@ -62,16 +63,19 @@ function Navbar({ setPage }: NavbarProps) {
       );
 
 	return (
-		<>
-        <AppBar position="sticky">
-            <Button onClick={toggleDrawer(true)}>
-                <MenuIcon />
-            </Button>
-			<Drawer open={open} onClose={toggleDrawer(false)}>
-                {DrawerList}
-			</Drawer>
-        </AppBar>
-		</>
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="sticky" sx={{ bgcolor: "lightseagreen" }}>
+                <Toolbar>
+                    <Button onClick={toggleDrawer(true)}>
+                        <MenuIcon sx={{ color: "white" }}/>
+                    </Button>
+                    <Drawer open={open} onClose={toggleDrawer(false)}>
+                        {DrawerList}
+                    </Drawer>
+                    <h3 onClick={() => setPage('Home')}>eMotion</h3>
+                </Toolbar>
+            </AppBar>
+        </Box>
 	);
 }
 
