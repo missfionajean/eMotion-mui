@@ -6,10 +6,9 @@ import MyProfile from "./components/MyProfile";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import CalTest from "./components/CalTest";
-// import Promo from "./components/Promo";
 
 function App() {
-	//
+	// state to keep track of which page to render
 	const [page, setPage] = useState("Home");
 
 	return (
