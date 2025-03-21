@@ -33,7 +33,7 @@ function Navbar({ setPage }: NavbarProps) {
 
     const DrawerList = (
         // Box is a layout component used to wrap other components
-        <Box sx={{ width: 180 }} role="presentation" onClick={toggleDrawer(false)}>
+        <Box sx={{ width: 180 }} onClick={toggleDrawer(false)}>
         
             {/* Standard Navigation */}
             <List>
@@ -60,7 +60,7 @@ function Navbar({ setPage }: NavbarProps) {
                 ))}
             </List>
         </Box>
-      );
+    );
 
 	return (
         <Box sx={{ flexGrow: 1 }}>
